@@ -17,6 +17,8 @@ function alert(string $str)
 
 function displayException(PDOException $e)
 {
-    // TODO
+    alert( "Code SQL : ".$e->getCode());
+    //SQLSTATE[42000]: Syntax error or access violation: 1064 You have anerror in your SQL syntax ...
+    console( $e->getFile()."\\nLine : ". $e->getLine()."\\n". $e->getMessage());
 }
 ?>
